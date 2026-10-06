@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1130" viewBox="0 0 1600 1130"><rect width="1600" height="1130" fill="white"/>
+<text x="48" y="48" font-family="Arial,Helvetica,sans-serif" font-size="27" fill="#202c36" text-anchor="start" font-weight="bold">RIDEFORGE</text>
+<text x="1550" y="47" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#a85b0b" text-anchor="end" font-weight="bold">REV A / DRAFT / SHEET 4 OF 4</text>
+<text x="48" y="82" font-family="Arial,Helvetica,sans-serif" font-size="24" fill="#202c36" text-anchor="start" font-weight="bold">Connection schedule, draft decisions and verification</text>
+<text x="48" y="110" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">Read with sheets 1-3. Named nets are electrical connections; they do not define connector mating-face order or PCB footprints.</text>
+<line x1="48" y1="126" x2="1552" y2="126" stroke="#202c36" stroke-width="1"/>
+<rect x="48" y="155" width="1504" height="385" fill="#ffffff" stroke="#202c36" stroke-width="1.4"/>
+<rect x="48" y="155" width="1504" height="35" fill="#edf3f3" stroke="#202c36" stroke-width="1.4"/>
+<line x1="238" y1="155" x2="238" y2="540" stroke="#202c36" stroke-width="1"/>
+<line x1="648" y1="155" x2="648" y2="540" stroke="#202c36" stroke-width="1"/>
+<text x="58" y="179" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="bold">Connection</text>
+<text x="248" y="179" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="bold">From</text>
+<text x="658" y="179" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="bold">To / treatment</text>
+<line x1="48" y1="190" x2="1552" y2="190" stroke="#202c36" stroke-width="0.7"/>
+<text x="58" y="214" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">V5_SYS</text>
+<text x="248" y="214" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">U1 output</text>
+<text x="658" y="214" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">U3 verified 5V/VIN input + U2 IN/EN; unplug vehicle supply for USB programming.</text>
+<line x1="48" y1="225" x2="1552" y2="225" stroke="#202c36" stroke-width="0.7"/>
+<text x="58" y="249" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">V3V3_SYS</text>
+<text x="248" y="249" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">U2 output</text>
+<text x="658" y="249" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">MAX-M10S VCC/V_IO or verified 3.3 V breakout input; GNSS decoupling.</text>
+<line x1="48" y1="260" x2="1552" y2="260" stroke="#202c36" stroke-width="0.7"/>
+<text x="58" y="284" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">V3V3_FUEL</text>
+<text x="248" y="284" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">U3 regulated 3V3 output</text>
+<text x="658" y="284" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">U5 pin 5, C3 and upper fuel clamp; do not join to V3V3_SYS.</text>
+<line x1="48" y1="295" x2="1552" y2="295" stroke="#202c36" stroke-width="0.7"/>
+<text x="58" y="319" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">GND_STAR</text>
+<text x="248" y="319" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">J1 verified battery/harness GND</text>
+<text x="658" y="319" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">U1/U2/U3/U4/U5 and all local return capacitors; one external return.</text>
+<line x1="48" y1="330" x2="1552" y2="330" stroke="#202c36" stroke-width="0.7"/>
+<text x="58" y="354" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">GPS_TX</text>
+<text x="248" y="354" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">U4 pin 2 / breakout TX</text>
+<text x="658" y="354" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">U3 exposed UART RX (GPIO17 proposed, actual mapping TBD).</text>
+<line x1="48" y1="365" x2="1552" y2="365" stroke="#202c36" stroke-width="0.7"/>
+<text x="58" y="389" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">GPS_RX</text>
+<text x="248" y="389" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">U3 exposed UART TX</text>
+<text x="658" y="389" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">U4 pin 3 / breakout RX (GPIO18 proposed, actual mapping TBD).</text>
+<line x1="48" y1="400" x2="1552" y2="400" stroke="#202c36" stroke-width="0.7"/>
+<text x="58" y="424" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">GPS_PPS</text>
+<text x="248" y="424" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">U4 pin 4 / breakout PPS</text>
+<text x="658" y="424" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">Optional U3 input; no startup pull-down (GPIO16 proposed).</text>
+<line x1="48" y1="435" x2="1552" y2="435" stroke="#202c36" stroke-width="0.7"/>
+<text x="58" y="459" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">FUEL_ADC</text>
+<text x="248" y="459" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">U5 pin 1 -&gt; R4 -&gt; C2 node</text>
+<text x="658" y="459" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">U3 exposed ADC1 input (GPIO1 proposed); conditioned real signal only.</text>
+<line x1="48" y1="470" x2="1552" y2="470" stroke="#202c36" stroke-width="0.7"/>
+<text x="58" y="494" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">J2 pin 1</text>
+<text x="248" y="494" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">T-harness R1 outgoing branch</text>
+<text x="658" y="494" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">R2 input = FUEL_TAP_LIMITED. Actual motorcycle sender pin is unverified.</text>
+<line x1="48" y1="505" x2="1552" y2="505" stroke="#202c36" stroke-width="0.7"/>
+<text x="58" y="529" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">J2 pin 2</text>
+<text x="248" y="529" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">Reserved</text>
+<text x="658" y="529" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">NC in baseline; no extra tank/chassis ground.</text>
+<rect x="48" y="574" width="1504" height="147" fill="#fffaf3" stroke="#a85b0b" stroke-width="1.4"/>
+<text x="64" y="602" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#a85b0b" text-anchor="start" font-weight="bold">Decisions made for this drawing</text>
+<text x="64" y="629" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">No backup battery or charger. U2 TLV76733-Q1 is a proposed new selection; original BOM left the external regulator open.</text>
+<text x="64" y="654" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">U1 values reproduce TI&#x27;s reference circuit, not a verified Platina installation. Reverse protection, TVS and input filter remain TBD.</text>
+<text x="64" y="679" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">Raw MAX-M10S uses a passive antenna baseline. A documented breakout is an alternate implementation, not an additional GPS.</text>
+<text x="64" y="704" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">SuperMini is an assembled board; no duplicate bare-ESP reset, boot or USB circuit is added. BLE is a radio link to the phone.</text>
+<text x="48" y="775" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#202c36" text-anchor="start" font-weight="bold">Verification before assembly / installation</text>
+<text x="48" y="805" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">1. Match actual board labels, GNSS variant, antenna and sender connector; finalize footprints and GPIO allocation.</text>
+<text x="48" y="833" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">2. Close protection ratings, clamp leakage/rail injection, U2 reverse current, and USB/UART sequencing; capture CAD and run ERC.</text>
+<text x="48" y="861" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">3. Bench-test current-limited power rails and temperatures; exercise a 0-16 V fuel test signal and powered-off cases.</text>
+<text x="48" y="889" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">4. Verify motorcycle waveform/loading, key-on/crank/key-off behavior and enclosure; calibrate tank level with known quantities.</text>
+<text x="48" y="926" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#202c36" text-anchor="start" font-weight="bold">Manufacturer references (clickable in PDF)</text>
+<text x="48" y="954" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#315e61" text-anchor="start" font-weight="normal">U1: TI LMR51610-Q1 data sheet / 5 V reference circuit</text>
+<text x="48" y="977" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#315e61" text-anchor="start" font-weight="normal">U2: TI TLV767-Q1 data sheet / DRB pinout and reverse current</text>
+<text x="48" y="1000" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#315e61" text-anchor="start" font-weight="normal">U4: u-blox MAX-M10S data sheet + integration manual</text>
+<text x="48" y="1023" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#315e61" text-anchor="start" font-weight="normal">U5: TI TLV9001-Q1 data sheet / standard DBV pinout</text>
+<line x1="48" y1="1060" x2="1552" y2="1060" stroke="#202c36" stroke-width="1"/>
+<text x="48" y="1086" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="start" font-weight="normal">Basis: pcb.md + pcb-components.md | 06 Oct 2026 | Amber = unresolved selection / validation</text>
+<text x="48" y="1110" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#a85b0b" text-anchor="start" font-weight="normal">Schematic review drawing. No CAD ERC, physical-board verification, vehicle testing or fabrication release.</text>
+</svg>

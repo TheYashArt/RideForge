@@ -51,7 +51,7 @@ Automotive battery inputs require more protection than a normal bench supply. TI
                            └──────────────── Bluetooth LE ─────────────── phone
 ```
 
-All low-voltage blocks use the same regulated 3.3 V rail and the same PCB ground. The motorcycle fuel-gauge signal enters only through the protected high-impedance analog front end.
+All low-voltage blocks use regulated 3.3 V supplies and the same PCB ground. For the selected SuperMini development-board implementation, the fuel buffer uses the controller board's own regulated 3.3 V output (`V3V3_FUEL`), while the GPS may use the separate external 3.3 V regulator described in `pcb-components.md`. Do not join the outputs of these two regulators. The motorcycle fuel-gauge signal enters only through the protected high-impedance analog front end.
 
 ## 4. Recommended net names
 
@@ -62,6 +62,7 @@ All low-voltage blocks use the same regulated 3.3 V rail and the same PCB ground
 | `VIN_PROTECTED` | Reverse- and surge-protected vehicle supply |
 | `V5_SYS` | Regulated 5 V power rail |
 | `V3V3_SYS` | Regulated 3.3 V logic rail |
+| `V3V3_FUEL` | Controller's regulated 3.3 V rail for the fuel buffer and upper input clamp |
 | `GND_STAR` | Common PCB ground tied to `BIKE_GND` at power entry |
 | `GPS_TX` | GPS-to-ESP UART data |
 | `GPS_RX` | ESP-to-GPS UART data |
@@ -122,6 +123,8 @@ V5_SYS ── ESP32-S3 development-board 5 V/VIN input
 V5_SYS ── U2 3.3 V regulator, rated at least 1 A ── V3V3_SYS
 V3V3_SYS ── GPS and fuel-signal conditioner
 ```
+
+For the selected SuperMini implementation, the external regulator supplies the GPS; power the fuel-signal conditioner from the SuperMini's regulated 3V3 output as `V3V3_FUEL`. This keeps the fuel buffer and ESP ADC on the same supply. Do not connect the external regulator output to the SuperMini 3V3 pin. The fuel buffer itself has a small supply load; confirm that the actual board exposes its regulated 3V3 output.
 
 If the final PCB uses an ESP32-S3-WROOM module instead of a development board, U1 may be configured directly for 3.3 V if the chosen power design provides sufficient transient performance and at least 1 A of usable output current.
 
@@ -280,6 +283,30 @@ For a raw MAX-M10S:
 
 ## 8. Module 4: factory fuel-gauge monitor
 
+### 8.0 Selected motorcycle and connection without cutting wires
+
+The user identifies the motorcycle as a **2023 Bajaj Platina 110, BS6 Phase 1, with a needle fuel gauge**. For this design, **assume a float-operated resistive sender**; this is a working assumption, not a verified sender specification. Retain the existing sender, its factory excitation and the instrument cluster.
+
+Install a removable T-harness at the existing external sender connector:
+
+```text
+Bike harness ── matching adapter plug ── matching adapter socket ── tank sender
+                      all original pins pass straight through
+                                      │
+                         identified sender signal only
+                                      │
+                              Rideforge fuel input
+```
+
+- Obtain the exact mating connector housings, terminals and seals. Pass every original terminal straight through by electrical pin identity, checking the connector's mating-face orientation.
+- Make the signal branch in the NEW adapter harness. Do not cut, strip, pierce or splice any original motorcycle wire. Do not use a loose backprobe as a permanent installation.
+- Only the identified sender signal branches to the fuel input. Leave the original sender return and any other terminals connected straight through. Connector pin count, wire colours and signal-terminal identity remain unverified.
+- The module receives ground through Rideforge's power connector, tied to battery negative/verified harness ground. This single-ended front end assumes the sender signal is referenced to that same ground; verify this before installation. Do not add another long ground return at the tank.
+- Do not connect 3.3 V, 5 V, 12 V, a pull-up or a separate resistance-measurement excitation to the sender. The factory gauge already operates the assumed resistive sender.
+- Where practical, place R1 at the signal takeoff inside the sealed adapter, before the outgoing branch cable, and R2 at the module. R1 remains one of the two 110 kΩ divider resistors below; do not add another 110 kΩ on top of it. This limits current if the downstream branch cable shorts; it does not validate the complete vehicle fault protection.
+
+Prepare the adapter and bench-test the module now. Connecting it to the motorcycle still requires identifying the correct terminal, measuring the signal, and validating input protection and powered-off behavior.
+
 ### 8.1 Measurement strategy
 
 The recommended design leaves the factory fuel gauge and sender connected exactly as they are. Rideforge taps only the sender signal through a high-impedance input.
@@ -309,7 +336,7 @@ FUEL_GAUGE_RAW
     R3 47 kΩ               ├── C1 10 nF ── GND_STAR
       │                    │
  GND_STAR                  ├── Schottky clamp to GND_STAR
-                           └── Schottky clamp to V3V3_SYS
+                           └── Schottky clamp to V3V3_FUEL
 ```
 
 Using two series 110 kΩ resistors shares voltage stress and limits transient current. Use suitably rated automotive resistors.
@@ -331,6 +358,15 @@ Expected values are:
 
 The divider presents approximately 267 kΩ to the factory gauge, minimizing additional loading.
 
+Clamp connections are explicit:
+
+| Diode | Anode | Cathode (marked end) |
+|---|---|---|
+| Upper positive clamp | `FUEL_DIV` | `V3V3_FUEL` |
+| Lower negative clamp | `GND_STAR` | `FUEL_DIV` |
+
+Select low-leakage parts with suitable ratings after the signal and transient requirements are known. These rail clamps are not a complete automotive protection design. In particular, the upper clamp can feed current into the 3.3 V rail when the signal is live and Rideforge is unpowered, or during an overvoltage event. The rail's ability to handle that current and any required power-off isolation/rail protection must be resolved before installation. The [TLV9001-Q1 datasheet](https://www.ti.com/lit/ds/symlink/tlv9001-q1.pdf), sections 6.1 and 8.3.1, also describes input protection diodes to the supply rails.
+
 ### 8.3 Analog buffer
 
 Use an automotive-qualified rail-to-rail op-amp such as the [TLV9001-Q1](https://www.ti.com/product/TLV9001-Q1):
@@ -349,12 +385,26 @@ FUEL_DIV ───────────────> + input
                                       GND_STAR
 ```
 
-- Power the op-amp from `V3V3_SYS` and `GND_STAR`.
+- Power the op-amp from `V3V3_FUEL` and `GND_STAR`. On the selected SuperMini, `V3V3_FUEL` is its regulated 3V3 output, not raw bike power or the separate GPS regulator output.
 - Place a 100 nF supply-decoupling capacitor directly beside the op-amp.
 - Connect the inverting input to the op-amp output before R4.
 - R4 isolates the op-amp from the ADC filter capacitor.
 - C2 follows Espressif's ADC filtering recommendation.
 - Use ADC1 rather than ADC2 for fewer radio-sharing complications.
+
+For **TLV9001QDBVRQ1, standard DBV 5-pin SOT-23**, connect:
+
+| Pin | Function | Connection |
+|---:|---|---|
+| 1 | OUT | Pin 4 directly, and R4 1 kΩ leading to `FUEL_ADC` |
+| 2 | V− | `GND_STAR` |
+| 3 | IN+ | `FUEL_DIV` |
+| 4 | IN− | Pin 1 directly; feedback before R4 |
+| 5 | V+ | `V3V3_FUEL` |
+
+Place the supply-decoupling 100 nF capacitor between pins 5 and 2. Connect C2 100 nF from `FUEL_ADC` to `GND_STAR`. Connect `FUEL_ADC` to an exposed ADC1 GPIO on the actual SuperMini; GPIO1 / ADC1_CH0 is the source design's suggestion, not a verified header assignment. Firmware must configure a suitable ADC attenuation and calibration for the conditioned range.
+
+The pin numbers above do **not** apply to the SC70 version or TLV9001U alternate pinout. Check the exact package against the [TI pin-function table](https://www.ti.com/lit/ds/symlink/tlv9001-q1.pdf).
 
 ### 8.4 Calibration
 
@@ -529,7 +579,10 @@ The following must be confirmed before this document can become a fabrication-re
 - Exact marking and seller schematic for the device described as `NEO-M10S`.
 - Whether a local backup battery is actually required.
 - Battery chemistry, capacity and allowed charge temperature.
-- Motorcycle model/year and whether power is taken from ACC or permanent battery.
+- Motorcycle identified by the user: 2023 Bajaj Platina 110, BS6 Phase 1, needle fuel gauge. Verify the exact connector/pinout and whether power is taken from ACC or permanent battery.
+- Float-operated resistive sender is assumed; verify its ground reference and electrical behavior.
+- Exact mating sender connectors for the removable T-harness; no original wiring may be cut or pierced.
+- Fuel input clamp ratings, rail-current handling and powered-off isolation/protection.
 - Fuel-sender wire identity.
 - Fuel signal voltage/waveform at empty and full with the engine off and running.
 - Required connector family, enclosure size and environmental rating.

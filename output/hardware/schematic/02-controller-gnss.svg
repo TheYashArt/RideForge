@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1130" viewBox="0 0 1600 1130"><rect width="1600" height="1130" fill="white"/>
+<text x="48" y="48" font-family="Arial,Helvetica,sans-serif" font-size="27" fill="#202c36" text-anchor="start" font-weight="bold">RIDEFORGE</text>
+<text x="1550" y="47" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#a85b0b" text-anchor="end" font-weight="bold">REV A / DRAFT / SHEET 2 OF 4</text>
+<text x="48" y="82" font-family="Arial,Helvetica,sans-serif" font-size="24" fill="#202c36" text-anchor="start" font-weight="bold">ESP32-S3 controller and MAX-M10S GNSS</text>
+<text x="48" y="110" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">Raw-module option drawn below. Use the alternate J3 breakout interface instead if the purchased GPS is a carrier board.</text>
+<line x1="48" y1="126" x2="1552" y2="126" stroke="#202c36" stroke-width="1"/>
+<rect x="68" y="189" width="478" height="520" fill="none" stroke="#202c36" stroke-width="1.4"/>
+<text x="87" y="220" font-family="Arial,Helvetica,sans-serif" font-size="21" fill="#202c36" text-anchor="start" font-weight="bold">U3 / ESP32-S3 SuperMini</text>
+<text x="87" y="250" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#a85b0b" text-anchor="start" font-weight="normal">Board revision / header footprint TBD</text>
+<text x="87" y="294" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#202c36" text-anchor="start" font-weight="normal">Verified 5V/VIN input</text>
+<line x1="20" y1="288" x2="68" y2="288" stroke="#9b303b" stroke-width="2"/>
+<text x="20" y="270" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#9b303b" text-anchor="start" font-weight="bold">V5_SYS</text>
+<text x="87" y="345" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#202c36" text-anchor="start" font-weight="normal">GND</text>
+<line x1="20" y1="339" x2="68" y2="339" stroke="#315e61" stroke-width="2"/>
+<line x1="20" y1="339" x2="20" y2="349" stroke="#202c36" stroke-width="2"/>
+<line x1="8.0" y1="349" x2="32.0" y2="349" stroke="#202c36" stroke-width="2"/>
+<line x1="12.0" y1="355" x2="28.0" y2="355" stroke="#202c36" stroke-width="2"/>
+<line x1="16.0" y1="361" x2="24.0" y2="361" stroke="#202c36" stroke-width="2"/>
+<text x="87" y="396" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#202c36" text-anchor="start" font-weight="normal">3V3 regulated OUTPUT</text>
+<line x1="546" y1="390" x2="735" y2="390" stroke="#9b303b" stroke-width="2"/>
+<text x="573" y="370" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#9b303b" text-anchor="start" font-weight="bold">V3V3_FUEL</text>
+<text x="528" y="477" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#202c36" text-anchor="end" font-weight="normal">UART_RX_FROM_GNSS</text>
+<text x="528" y="556" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#202c36" text-anchor="end" font-weight="normal">UART_TX_TO_GNSS</text>
+<text x="528" y="635" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#202c36" text-anchor="end" font-weight="normal">PPS_INPUT_OPTIONAL</text>
+<text x="87" y="680" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#202c36" text-anchor="start" font-weight="normal">ADC1_FUEL_INPUT</text>
+<line x1="546" y1="674" x2="735" y2="674" stroke="#315e61" stroke-width="2"/>
+<text x="575" y="698" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#315e61" text-anchor="start" font-weight="bold">FUEL_ADC (sheet 3)</text>
+<text x="88" y="737" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#202c36" text-anchor="start" font-weight="bold">GPIO proposals from pcb.md:</text>
+<text x="88" y="764" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">RX GPIO17 / TX GPIO18 / PPS GPIO16 / ADC GPIO1.</text>
+<text x="88" y="790" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#a85b0b" text-anchor="start" font-weight="normal">Use only exposed pins on the actual SuperMini.</text>
+<text x="88" y="816" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">GPIO4/5 are an alternate UART proposal in older notes.</text>
+<text x="88" y="842" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">Reserve GPIO19/20 for native USB; avoid strapping pins.</text>
+<rect x="1095" y="189" width="360" height="520" fill="none" stroke="#202c36" stroke-width="1.4"/>
+<text x="1112" y="220" font-family="Arial,Helvetica,sans-serif" font-size="21" fill="#202c36" text-anchor="start" font-weight="bold">U4 / u-blox MAX-M10S</text>
+<text x="1112" y="250" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#202c36" text-anchor="start" font-weight="normal">Raw module, 3.3 V UART logic</text>
+<text x="1112" y="295" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#202c36" text-anchor="start" font-weight="normal">8 VCC + 7 V_IO</text>
+<line x1="970" y1="289" x2="1095" y2="289" stroke="#9b303b" stroke-width="2"/>
+<text x="959" y="270" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#9b303b" text-anchor="start" font-weight="bold">V3V3_SYS</text>
+<text x="1112" y="345" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#202c36" text-anchor="start" font-weight="normal">1 / 10 / 12 GND</text>
+<line x1="1020" y1="339" x2="1095" y2="339" stroke="#315e61" stroke-width="2"/>
+<line x1="1020" y1="339" x2="1020" y2="349" stroke="#202c36" stroke-width="2"/>
+<line x1="1008.0" y1="349" x2="1032.0" y2="349" stroke="#202c36" stroke-width="2"/>
+<line x1="1012.0" y1="355" x2="1028.0" y2="355" stroke="#202c36" stroke-width="2"/>
+<line x1="1016.0" y1="361" x2="1024.0" y2="361" stroke="#202c36" stroke-width="2"/>
+<text x="1112" y="477" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#202c36" text-anchor="start" font-weight="normal">2 TXD (output)</text>
+<text x="1112" y="556" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#202c36" text-anchor="start" font-weight="normal">3 RXD (input)</text>
+<text x="1112" y="635" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#202c36" text-anchor="start" font-weight="normal">4 TIMEPULSE (output)</text>
+<text x="1437" y="687" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="end" font-weight="normal">11 RF_IN</text>
+<line x1="1455" y1="681" x2="1512" y2="681" stroke="#315e61" stroke-width="2"/>
+<circle cx="1512" cy="681" r="18" fill="none" stroke="#202c36" stroke-width="1.5"/>
+<circle cx="1512" cy="681" r="3.8" fill="#315e61"/>
+<line x1="1512" y1="699" x2="1512" y2="741" stroke="#315e61" stroke-width="2"/>
+<line x1="1512" y1="741" x2="1512" y2="751" stroke="#202c36" stroke-width="2"/>
+<line x1="1500.0" y1="751" x2="1524.0" y2="751" stroke="#202c36" stroke-width="2"/>
+<line x1="1504.0" y1="757" x2="1520.0" y2="757" stroke="#202c36" stroke-width="2"/>
+<line x1="1508.0" y1="763" x2="1516.0" y2="763" stroke="#202c36" stroke-width="2"/>
+<text x="1550" y="657" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#315e61" text-anchor="end" font-weight="bold">GNSS_RF_50R</text>
+<text x="1550" y="794" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#a85b0b" text-anchor="end" font-weight="normal">J4 / coax, part TBD</text>
+<text x="1550" y="818" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#202c36" text-anchor="end" font-weight="normal">Attach passive GNSS antenna</text>
+<line x1="546" y1="471" x2="698" y2="471" stroke="#315e61" stroke-width="2"/>
+<line x1="698" y1="471" x2="770.0" y2="471" stroke="#315e61" stroke-width="2"/>
+<rect x="770.0" y="462" width="50" height="18" fill="none" stroke="#202c36" stroke-width="1.4"/>
+<line x1="820.0" y1="471" x2="892" y2="471" stroke="#315e61" stroke-width="2"/>
+<text x="795.0" y="445" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="middle" font-weight="normal">R20</text>
+<text x="795.0" y="506" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="middle" font-weight="normal">47 Ohm optional</text>
+<line x1="892" y1="471" x2="1095" y2="471" stroke="#315e61" stroke-width="2"/>
+<text x="650" y="444" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#315e61" text-anchor="end" font-weight="bold">GPS_TX</text>
+<line x1="546" y1="550" x2="698" y2="550" stroke="#315e61" stroke-width="2"/>
+<line x1="698" y1="550" x2="770.0" y2="550" stroke="#315e61" stroke-width="2"/>
+<rect x="770.0" y="541" width="50" height="18" fill="none" stroke="#202c36" stroke-width="1.4"/>
+<line x1="820.0" y1="550" x2="892" y2="550" stroke="#315e61" stroke-width="2"/>
+<text x="795.0" y="524" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="middle" font-weight="normal">R21</text>
+<text x="795.0" y="585" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="middle" font-weight="normal">47 Ohm optional</text>
+<line x1="892" y1="550" x2="1095" y2="550" stroke="#315e61" stroke-width="2"/>
+<text x="650" y="523" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#315e61" text-anchor="end" font-weight="bold">GPS_RX</text>
+<line x1="546" y1="629" x2="1095" y2="629" stroke="#315e61" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="812" y="612" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#315e61" text-anchor="middle" font-weight="bold">GPS_PPS (optional)</text>
+<text x="750" y="714" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#9b303b" text-anchor="start" font-weight="bold">V3V3_SYS</text>
+<line x1="700" y1="735" x2="1010" y2="735" stroke="#9b303b" stroke-width="2"/>
+<circle cx="720" cy="735" r="3.8" fill="#9b303b"/>
+<line x1="720" y1="735" x2="720" y2="771.5" stroke="#315e61" stroke-width="2"/>
+<line x1="708" y1="771.5" x2="732" y2="771.5" stroke="#202c36" stroke-width="2"/>
+<line x1="708" y1="781.5" x2="732" y2="781.5" stroke="#202c36" stroke-width="2"/>
+<line x1="720" y1="781.5" x2="720" y2="818" stroke="#315e61" stroke-width="2"/>
+<text x="701" y="774.5" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="end" font-weight="normal">C40</text>
+<text x="701" y="794.5" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="end" font-weight="normal">100 nF / VCC</text>
+<line x1="720" y1="818" x2="720" y2="828" stroke="#202c36" stroke-width="2"/>
+<line x1="708.0" y1="828" x2="732.0" y2="828" stroke="#202c36" stroke-width="2"/>
+<line x1="712.0" y1="834" x2="728.0" y2="834" stroke="#202c36" stroke-width="2"/>
+<line x1="716.0" y1="840" x2="724.0" y2="840" stroke="#202c36" stroke-width="2"/>
+<circle cx="865" cy="735" r="3.8" fill="#9b303b"/>
+<line x1="865" y1="735" x2="865" y2="771.5" stroke="#315e61" stroke-width="2"/>
+<line x1="853" y1="771.5" x2="877" y2="771.5" stroke="#202c36" stroke-width="2"/>
+<line x1="853" y1="781.5" x2="877" y2="781.5" stroke="#202c36" stroke-width="2"/>
+<line x1="865" y1="781.5" x2="865" y2="818" stroke="#315e61" stroke-width="2"/>
+<text x="884" y="774.5" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="start" font-weight="normal">C41</text>
+<text x="884" y="794.5" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="start" font-weight="normal">100 nF / V_IO</text>
+<line x1="865" y1="818" x2="865" y2="828" stroke="#202c36" stroke-width="2"/>
+<line x1="853.0" y1="828" x2="877.0" y2="828" stroke="#202c36" stroke-width="2"/>
+<line x1="857.0" y1="834" x2="873.0" y2="834" stroke="#202c36" stroke-width="2"/>
+<line x1="861.0" y1="840" x2="869.0" y2="840" stroke="#202c36" stroke-width="2"/>
+<text x="1190" y="742" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#9b303b" text-anchor="middle" font-weight="bold">V3V3_SYS</text>
+<line x1="1190" y1="755" x2="1190" y2="786.5" stroke="#315e61" stroke-width="2"/>
+<line x1="1178" y1="786.5" x2="1202" y2="786.5" stroke="#202c36" stroke-width="2"/>
+<line x1="1178" y1="796.5" x2="1202" y2="796.5" stroke="#202c36" stroke-width="2"/>
+<line x1="1190" y1="796.5" x2="1190" y2="828" stroke="#315e61" stroke-width="2"/>
+<text x="1209" y="789.5" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="start" font-weight="normal">C42</text>
+<text x="1209" y="809.5" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="start" font-weight="normal">10 uF / 10 V</text>
+<line x1="1190" y1="828" x2="1190" y2="838" stroke="#202c36" stroke-width="2"/>
+<line x1="1178.0" y1="838" x2="1202.0" y2="838" stroke="#202c36" stroke-width="2"/>
+<line x1="1182.0" y1="844" x2="1198.0" y2="844" stroke="#202c36" stroke-width="2"/>
+<line x1="1186.0" y1="850" x2="1194.0" y2="850" stroke="#202c36" stroke-width="2"/>
+<text x="1088" y="861" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="start" font-weight="normal">Fit close to U4; check breakout parts before duplicating.</text>
+<text x="48" y="898" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="start" font-weight="normal">U4 unused pads: 5 EXTINT, 6 V_BCKP, 9 RESET_N, 13 LNA_EN, 14 VCC_RF, 15 VIO_SEL, 16 SDA, 17 SCL, 18 SAFEBOOT_N: NC.</text>
+<text x="48" y="924" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">VIO_SEL open = 3.3 V I/O. Passive antenna baseline; an active antenna needs its verified bias supply circuit.</text>
+<rect x="48" y="932" width="1504" height="122" fill="#fffaf3" stroke="#a85b0b" stroke-width="1.4"/>
+<text x="64" y="960" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#a85b0b" text-anchor="start" font-weight="bold">Alternate J3 / breakout interface + power sequencing</text>
+<text x="64" y="987" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">J3: 1 V3V3_SYS / 2 GND_STAR / 3 GPS_TX / 4 GPS_RX / 5 GPS_PPS optional. These are proposed carrier-connector pins.</text>
+<text x="64" y="1012" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">Use U4 raw module OR J3 breakout; do not populate both. Breakout header order and voltage must be verified separately.</text>
+<text x="64" y="1037" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">Do not drive GNSS inputs while V_IO is off. PPS must stay high impedance at startup. Verify USB and separate-rail sequencing.</text>
+<line x1="48" y1="1060" x2="1552" y2="1060" stroke="#202c36" stroke-width="1"/>
+<text x="48" y="1086" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="start" font-weight="normal">Basis: pcb.md + pcb-components.md | 06 Oct 2026 | Amber = unresolved selection / validation</text>
+<text x="48" y="1110" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#a85b0b" text-anchor="start" font-weight="normal">Schematic review drawing. No CAD ERC, physical-board verification, vehicle testing or fabrication release.</text>
+</svg>

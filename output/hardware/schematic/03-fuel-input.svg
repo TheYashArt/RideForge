@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1130" viewBox="0 0 1600 1130"><rect width="1600" height="1130" fill="white"/>
+<text x="48" y="48" font-family="Arial,Helvetica,sans-serif" font-size="27" fill="#202c36" text-anchor="start" font-weight="bold">RIDEFORGE</text>
+<text x="1550" y="47" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#a85b0b" text-anchor="end" font-weight="bold">REV A / DRAFT / SHEET 3 OF 4</text>
+<text x="48" y="82" font-family="Arial,Helvetica,sans-serif" font-size="24" fill="#202c36" text-anchor="start" font-weight="bold">Fuel-sender tap, input conditioning and ADC</text>
+<text x="48" y="110" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">Reference front end assumes 0-16 V. Actual vehicle signal / ground reference, tank calibration and powered-off protection remain unverified.</text>
+<line x1="48" y1="126" x2="1552" y2="126" stroke="#202c36" stroke-width="1"/>
+<rect x="55" y="175" width="1460" height="190" fill="#fffaf3" stroke="#a85b0b" stroke-width="1.4"/>
+<text x="76" y="205" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#a85b0b" text-anchor="start" font-weight="bold">REMOVABLE T-HARNESS / NO ORIGINAL WIRE CUT OR PIERCED</text>
+<text x="76" y="244" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#202c36" text-anchor="start" font-weight="bold">Original bike harness</text>
+<text x="1250" y="244" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#202c36" text-anchor="start" font-weight="bold">Original tank sender</text>
+<line x1="295" y1="255" x2="1240" y2="255" stroke="#315e61" stroke-width="2"/>
+<circle cx="650" cy="255" r="3.8" fill="#315e61"/>
+<text x="345" y="236" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">Identified signal contact passes straight through by electrical identity</text>
+<line x1="295" y1="298" x2="1240" y2="298" stroke="#315e61" stroke-width="2"/>
+<text x="345" y="325" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">All other original contacts / sender return pass straight through; actual contact count and pin numbers TBD.</text>
+<line x1="650" y1="255" x2="650" y2="275" stroke="#315e61" stroke-width="2"/>
+<line x1="650" y1="275" x2="240" y2="275" stroke="#315e61" stroke-width="2"/>
+<line x1="240" y1="275" x2="240" y2="415" stroke="#315e61" stroke-width="2"/>
+<text x="670" y="284" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#315e61" text-anchor="start" font-weight="bold">FUEL_GAUGE_RAW</text>
+<line x1="240" y1="415" x2="315.0" y2="415" stroke="#315e61" stroke-width="2"/>
+<rect x="315.0" y="406" width="50" height="18" fill="none" stroke="#202c36" stroke-width="1.4"/>
+<line x1="365.0" y1="415" x2="440" y2="415" stroke="#315e61" stroke-width="2"/>
+<text x="340.0" y="389" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="middle" font-weight="normal">R1</text>
+<text x="340.0" y="450" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="middle" font-weight="normal">110 kOhm / 1%</text>
+<text x="81" y="384" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#a85b0b" text-anchor="start" font-weight="bold">R1 inside sealed adapter</text>
+<rect x="222" y="391" width="223" height="72" fill="none" stroke="#a85b0b" stroke-width="1.4" stroke-dasharray="6 4"/>
+<line x1="440" y1="415" x2="680" y2="415" stroke="#315e61" stroke-width="2"/>
+<text x="460" y="395" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#315e61" text-anchor="start" font-weight="bold">FUEL_TAP_LIMITED</text>
+<text x="681" y="393" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="bold">J2 pin 1</text>
+<rect x="675" y="406" width="12" height="18" fill="none" stroke="#202c36" stroke-width="1.4"/>
+<line x1="687" y1="415" x2="757" y2="415" stroke="#315e61" stroke-width="2"/>
+<line x1="757" y1="415" x2="847.0" y2="415" stroke="#315e61" stroke-width="2"/>
+<rect x="847.0" y="406" width="50" height="18" fill="none" stroke="#202c36" stroke-width="1.4"/>
+<line x1="897.0" y1="415" x2="987" y2="415" stroke="#315e61" stroke-width="2"/>
+<text x="872.0" y="389" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="middle" font-weight="normal">R2</text>
+<text x="872.0" y="450" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="middle" font-weight="normal">110 kOhm / 1%</text>
+<line x1="987" y1="415" x2="1075" y2="415" stroke="#315e61" stroke-width="2"/>
+<circle cx="1075" cy="415" r="3.8" fill="#315e61"/>
+<text x="1020" y="393" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#315e61" text-anchor="start" font-weight="bold">FUEL_DIV</text>
+<text x="52" y="487" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#a85b0b" text-anchor="start" font-weight="normal">J2 pin 2: RESERVED / NC</text>
+<text x="52" y="512" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">No second tank ground added.</text>
+<line x1="1075" y1="415" x2="1075" y2="540" stroke="#315e61" stroke-width="2"/>
+<line x1="1075" y1="540" x2="430" y2="540" stroke="#315e61" stroke-width="2"/>
+<circle cx="1075" cy="540" r="3.8" fill="#315e61"/>
+<line x1="1075" y1="540" x2="1170" y2="540" stroke="#315e61" stroke-width="2"/>
+<line x1="710" y1="540" x2="785" y2="540" stroke="#315e61" stroke-width="2"/>
+<circle cx="430" cy="540" r="3.8" fill="#315e61"/>
+<circle cx="580" cy="540" r="3.8" fill="#315e61"/>
+<circle cx="710" cy="540" r="3.8" fill="#315e61"/>
+<line x1="430" y1="540" x2="430" y2="599.0" stroke="#315e61" stroke-width="2"/>
+<rect x="421" y="599.0" width="18" height="46" fill="none" stroke="#202c36" stroke-width="1.4"/>
+<line x1="430" y1="645.0" x2="430" y2="704" stroke="#315e61" stroke-width="2"/>
+<text x="412" y="619.0" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="end" font-weight="normal">R3</text>
+<text x="412" y="640.0" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="end" font-weight="normal">47 kOhm / 1%</text>
+<line x1="430" y1="704" x2="430" y2="714" stroke="#202c36" stroke-width="2"/>
+<line x1="418.0" y1="714" x2="442.0" y2="714" stroke="#202c36" stroke-width="2"/>
+<line x1="422.0" y1="720" x2="438.0" y2="720" stroke="#202c36" stroke-width="2"/>
+<line x1="426.0" y1="726" x2="434.0" y2="726" stroke="#202c36" stroke-width="2"/>
+<line x1="580" y1="540" x2="580" y2="617.0" stroke="#315e61" stroke-width="2"/>
+<line x1="568" y1="617.0" x2="592" y2="617.0" stroke="#202c36" stroke-width="2"/>
+<line x1="568" y1="627.0" x2="592" y2="627.0" stroke="#202c36" stroke-width="2"/>
+<line x1="580" y1="627.0" x2="580" y2="704" stroke="#315e61" stroke-width="2"/>
+<text x="561" y="620.0" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="end" font-weight="normal">C1</text>
+<text x="561" y="640.0" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="end" font-weight="normal">10 nF</text>
+<line x1="580" y1="704" x2="580" y2="714" stroke="#202c36" stroke-width="2"/>
+<line x1="568.0" y1="714" x2="592.0" y2="714" stroke="#202c36" stroke-width="2"/>
+<line x1="572.0" y1="720" x2="588.0" y2="720" stroke="#202c36" stroke-width="2"/>
+<line x1="576.0" y1="726" x2="584.0" y2="726" stroke="#202c36" stroke-width="2"/>
+<line x1="710" y1="452" x2="710" y2="484.0" stroke="#315e61" stroke-width="2"/>
+<line x1="710" y1="540" x2="710" y2="508.0" stroke="#315e61" stroke-width="2"/>
+<line x1="699" y1="508.0" x2="721" y2="508.0" stroke="#202c36" stroke-width="2"/>
+<line x1="721" y1="508.0" x2="710" y2="484.0" stroke="#202c36" stroke-width="2"/>
+<line x1="710" y1="484.0" x2="699" y2="508.0" stroke="#202c36" stroke-width="2"/>
+<line x1="697" y1="484.0" x2="723" y2="484.0" stroke="#202c36" stroke-width="2"/>
+<text x="688" y="491.0" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="end" font-weight="normal">D2</text>
+<text x="688" y="511.0" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#a85b0b" text-anchor="end" font-weight="normal">Upper clamp TBD</text>
+<text x="692" y="483.0" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#202c36" text-anchor="end" font-weight="normal">K</text>
+<text x="692" y="517.0" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#202c36" text-anchor="end" font-weight="normal">A</text>
+<text x="745" y="477" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#9b303b" text-anchor="start" font-weight="bold">V3V3_FUEL</text>
+<line x1="710" y1="452" x2="736" y2="452" stroke="#9b303b" stroke-width="2"/>
+<line x1="736" y1="452" x2="736" y2="480" stroke="#9b303b" stroke-width="2"/>
+<line x1="710" y1="540" x2="710" y2="610.0" stroke="#315e61" stroke-width="2"/>
+<line x1="710" y1="704" x2="710" y2="634.0" stroke="#315e61" stroke-width="2"/>
+<line x1="699" y1="634.0" x2="721" y2="634.0" stroke="#202c36" stroke-width="2"/>
+<line x1="721" y1="634.0" x2="710" y2="610.0" stroke="#202c36" stroke-width="2"/>
+<line x1="710" y1="610.0" x2="699" y2="634.0" stroke="#202c36" stroke-width="2"/>
+<line x1="697" y1="610.0" x2="723" y2="610.0" stroke="#202c36" stroke-width="2"/>
+<text x="732" y="617.0" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">D3</text>
+<text x="732" y="637.0" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#a85b0b" text-anchor="start" font-weight="normal">Lower clamp TBD</text>
+<text x="692" y="609.0" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#202c36" text-anchor="end" font-weight="normal">K</text>
+<text x="692" y="643.0" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#202c36" text-anchor="end" font-weight="normal">A</text>
+<line x1="710" y1="704" x2="710" y2="714" stroke="#202c36" stroke-width="2"/>
+<line x1="698.0" y1="714" x2="722.0" y2="714" stroke="#202c36" stroke-width="2"/>
+<line x1="702.0" y1="720" x2="718.0" y2="720" stroke="#202c36" stroke-width="2"/>
+<line x1="706.0" y1="726" x2="714.0" y2="726" stroke="#202c36" stroke-width="2"/>
+<line x1="1170" y1="500" x2="1170" y2="690" stroke="#202c36" stroke-width="2"/>
+<line x1="1170" y1="690" x2="1310" y2="595" stroke="#202c36" stroke-width="2"/>
+<line x1="1310" y1="595" x2="1170" y2="500" stroke="#202c36" stroke-width="2"/>
+<text x="1177" y="547" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">+ 3</text>
+<text x="1177" y="651" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">- 4</text>
+<text x="1550" y="477" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#202c36" text-anchor="end" font-weight="bold">U5 / TLV9001QDBVRQ1</text>
+<text x="1550" y="501" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="end" font-weight="normal">DBV / standard SOT-23-5</text>
+<line x1="1310" y1="595" x2="1338" y2="595" stroke="#315e61" stroke-width="2"/>
+<line x1="1338" y1="595" x2="1338" y2="730" stroke="#315e61" stroke-width="2"/>
+<line x1="1338" y1="730" x2="1100" y2="730" stroke="#315e61" stroke-width="2"/>
+<line x1="1100" y1="730" x2="1100" y2="645" stroke="#315e61" stroke-width="2"/>
+<line x1="1100" y1="645" x2="1170" y2="645" stroke="#315e61" stroke-width="2"/>
+<circle cx="1338" cy="595" r="3.8" fill="#315e61"/>
+<text x="1320" y="579" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="start" font-weight="normal">1 OUT</text>
+<text x="1130" y="756" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">Feedback: OUT pin 1 directly to IN- pin 4, before R4.</text>
+<line x1="1310" y1="595" x2="1370" y2="595" stroke="#315e61" stroke-width="2"/>
+<line x1="1370" y1="595" x2="1427.0" y2="595" stroke="#315e61" stroke-width="2"/>
+<rect x="1427.0" y="586" width="50" height="18" fill="none" stroke="#202c36" stroke-width="1.4"/>
+<line x1="1477.0" y1="595" x2="1534" y2="595" stroke="#315e61" stroke-width="2"/>
+<text x="1452.0" y="569" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="middle" font-weight="normal">R4</text>
+<text x="1452.0" y="630" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="middle" font-weight="normal">1 kOhm</text>
+<line x1="1534" y1="595" x2="1544" y2="595" stroke="#315e61" stroke-width="2"/>
+<line x1="1544" y1="595" x2="1544" y2="813" stroke="#315e61" stroke-width="2"/>
+<line x1="1544" y1="813" x2="1110" y2="813" stroke="#315e61" stroke-width="2"/>
+<text x="1270" y="792" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#315e61" text-anchor="start" font-weight="bold">FUEL_ADC -&gt; U3 ADC1 input</text>
+<circle cx="1445" cy="813" r="3.8" fill="#315e61"/>
+<line x1="1445" y1="813" x2="1445" y2="852.0" stroke="#315e61" stroke-width="2"/>
+<line x1="1433" y1="852.0" x2="1457" y2="852.0" stroke="#202c36" stroke-width="2"/>
+<line x1="1433" y1="862.0" x2="1457" y2="862.0" stroke="#202c36" stroke-width="2"/>
+<line x1="1445" y1="862.0" x2="1445" y2="901" stroke="#315e61" stroke-width="2"/>
+<text x="1426" y="855.0" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="end" font-weight="normal">C2</text>
+<text x="1426" y="875.0" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="end" font-weight="normal">100 nF</text>
+<line x1="1445" y1="901" x2="1445" y2="911" stroke="#202c36" stroke-width="2"/>
+<line x1="1433.0" y1="911" x2="1457.0" y2="911" stroke="#202c36" stroke-width="2"/>
+<line x1="1437.0" y1="917" x2="1453.0" y2="917" stroke="#202c36" stroke-width="2"/>
+<line x1="1441.0" y1="923" x2="1449.0" y2="923" stroke="#202c36" stroke-width="2"/>
+<line x1="1240" y1="547.5" x2="1240" y2="514" stroke="#9b303b" stroke-width="2"/>
+<text x="1240" y="420" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#9b303b" text-anchor="middle" font-weight="bold">V3V3_FUEL</text>
+<line x1="1240" y1="514" x2="1240" y2="432" stroke="#9b303b" stroke-width="2"/>
+<text x="1248" y="529" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="start" font-weight="normal">5 V+</text>
+<line x1="1240" y1="642.5" x2="1240" y2="705" stroke="#315e61" stroke-width="2"/>
+<line x1="1240" y1="705" x2="1240" y2="715" stroke="#202c36" stroke-width="2"/>
+<line x1="1228.0" y1="715" x2="1252.0" y2="715" stroke="#202c36" stroke-width="2"/>
+<line x1="1232.0" y1="721" x2="1248.0" y2="721" stroke="#202c36" stroke-width="2"/>
+<line x1="1236.0" y1="727" x2="1244.0" y2="727" stroke="#202c36" stroke-width="2"/>
+<text x="1248" y="697" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="start" font-weight="normal">2 V-</text>
+<text x="52" y="582" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#9b303b" text-anchor="start" font-weight="bold">V3V3_FUEL</text>
+<line x1="144" y1="595" x2="144" y2="633.0" stroke="#315e61" stroke-width="2"/>
+<line x1="132" y1="633.0" x2="156" y2="633.0" stroke="#202c36" stroke-width="2"/>
+<line x1="132" y1="643.0" x2="156" y2="643.0" stroke="#202c36" stroke-width="2"/>
+<line x1="144" y1="643.0" x2="144" y2="681" stroke="#315e61" stroke-width="2"/>
+<text x="163" y="636.0" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="start" font-weight="normal">C3</text>
+<text x="163" y="656.0" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="start" font-weight="normal">100 nF / supply</text>
+<line x1="144" y1="681" x2="144" y2="691" stroke="#202c36" stroke-width="2"/>
+<line x1="132.0" y1="691" x2="156.0" y2="691" stroke="#202c36" stroke-width="2"/>
+<line x1="136.0" y1="697" x2="152.0" y2="697" stroke="#202c36" stroke-width="2"/>
+<line x1="140.0" y1="703" x2="148.0" y2="703" stroke="#202c36" stroke-width="2"/>
+<text x="52" y="744" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#202c36" text-anchor="start" font-weight="bold">Nominal divider: 47 / (110 + 110 + 47) = 0.17603</text>
+<text x="52" y="775" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#202c36" text-anchor="start" font-weight="normal">12 V -&gt; 2.112 V | 14.5 V -&gt; 2.552 V | 16 V -&gt; 2.816 V</text>
+<text x="52" y="806" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">DC input resistance ~267 kOhm; normal 16 V load ~59.9 uA.</text>
+<text x="52" y="836" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#a85b0b" text-anchor="start" font-weight="normal">FUEL_TAP_LIMITED is after R1: do not add a third 110 kOhm.</text>
+<text x="52" y="869" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">D2: A = FUEL_DIV, K = V3V3_FUEL.</text>
+<text x="52" y="894" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">D3: A = GND_STAR, K = FUEL_DIV.</text>
+<rect x="48" y="932" width="1504" height="122" fill="#fffaf3" stroke="#a85b0b" stroke-width="1.4"/>
+<text x="64" y="960" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#a85b0b" text-anchor="start" font-weight="bold">OPEN: input clamps and power-off behavior</text>
+<text x="64" y="987" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">D2/D3 parts, leakage over temperature and pulse ratings are TBD. Upper clamp and op-amp input diodes can back-power 3V3.</text>
+<text x="64" y="1012" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">The divider is not a completed automotive surge/power-off design. Resolve rail-current handling or isolation before bike use.</text>
+<text x="64" y="1037" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#202c36" text-anchor="start" font-weight="normal">Measure the actual signal and ground reference with the factory gauge connected. ADC attenuation/calibration must suit this range.</text>
+<line x1="48" y1="1060" x2="1552" y2="1060" stroke="#202c36" stroke-width="1"/>
+<text x="48" y="1086" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#202c36" text-anchor="start" font-weight="normal">Basis: pcb.md + pcb-components.md | 06 Oct 2026 | Amber = unresolved selection / validation</text>
+<text x="48" y="1110" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#a85b0b" text-anchor="start" font-weight="normal">Schematic review drawing. No CAD ERC, physical-board verification, vehicle testing or fabrication release.</text>
+</svg>

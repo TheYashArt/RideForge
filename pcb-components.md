@@ -17,7 +17,7 @@ This is a preliminary bill of materials. Some power-circuit parts and component 
 | Compatible GNSS antenna | 1 | May already be included with the GPS breakout |
 | Automotive 12 V to 5 V buck converter | 1 | [LMR51610-Q1](https://www.ti.com/product/LMR51610-Q1), 65 V input class, 1 A output |
 | Buck-converter supporting components | 1 set | Inductor, input/output capacitors, bootstrap capacitor and feedback resistors selected from the manufacturer's reference circuit |
-| External 5 V to 3.3 V regulator | 1 | Retained for the GPS and fuel circuit under the source design; at least 1 A as specified there. The SuperMini's own regulator powers its ESP32-S3. Exact external regulator remains unspecified |
+| External 5 V to 3.3 V regulator | 1 | Retained for the GPS; at least 1 A as specified in the source reference architecture. The SuperMini's own regulator powers its ESP32-S3 and fuel buffer. Exact external regulator remains unspecified |
 | 3.3 V regulator supporting components | 1 set | Capacitors and any other parts required by the selected regulator |
 | Input fuse | 1 | 0.5-1 A, with a suitable holder |
 | Reverse-polarity protection circuit | 1 set | Automotive MOSFET or protection controller, plus supporting parts |
@@ -32,15 +32,15 @@ The buck converter, reverse-polarity protection and filter require complete supp
 Motorcycle ACC -> fuse -> reverse protection -> TVS/filter -> 5 V buck
                                                            |
                                                            +-> SuperMini verified 5 V input
+                                                           |   +-> regulated 3V3 output -> fuel op-amp
                                                            |
                                                            +-> external 3.3 V regulator
                                                                +-> MAX-M10S
-                                                               +-> fuel op-amp
 ```
 
 Use a common ground for the SuperMini, GPS and fuel circuitry. The external 3.3 V rail does not connect to the SuperMini's 3V3 pin while the board is powered through its 5 V input.
 
-The external 3.3 V regulator may be omitted only after the actual SuperMini regulator's spare current, thermal performance and startup response are verified for the GPS and fuel load. In that alternative, the SuperMini's regulated 3V3 output supplies those loads; do not connect two regulator outputs together. The [MAX-M10S datasheet](https://content.u-blox.com/sites/default/files/MAX-M10S_DataSheet_UBX-20035208.pdf) specifies startup inrush up to approximately 100 mA. An active antenna can add further load.
+The fuel buffer and upper input clamp use the SuperMini's regulated 3V3 output (`V3V3_FUEL`) so that the buffer and ESP ADC share a supply. Confirm this output on the actual board. The external 3.3 V regulator may be omitted only after the actual SuperMini regulator's spare current, thermal performance and startup response are verified for the GPS and fuel load. In that alternative, the SuperMini's regulated 3V3 output supplies those loads; do not connect two regulator outputs together. The [MAX-M10S datasheet](https://content.u-blox.com/sites/default/files/MAX-M10S_DataSheet_UBX-20035208.pdf) specifies startup inrush up to approximately 100 mA. An active antenna can add further load.
 
 ## 2. Fuel-Monitor Circuit
 
@@ -58,12 +58,17 @@ These quantities are specified in the source document.
 
 Retain the motorcycle's existing fuel sender and gauge. **No replacement fuel sender or separate Bluetooth module is needed.**
 
+The selected bike is a user-identified **2023 Bajaj Platina 110 BS6 Phase 1 with a needle gauge**. Assume a float-operated resistive sender until verified. Use a removable T-harness; branch the signal only in that new adapter and pass every original terminal straight through. No original motorcycle wire may be cut or pierced. If R1 is fitted at the adapter's branch takeoff, it is one of the two listed 110 kΩ resistors, not an additional resistor.
+
+See `pcb.md` sections 8.0–8.3 for the adapter arrangement, clamp polarity and exact standard DBV TLV9001-Q1 pin connections. The Schottky clamps can inject current into the 3.3 V rail when the module is off or the input is overvoltage; final rail-current handling and powered-off protection remain to be selected and validated.
+
 ## 3. Connectors and Physical Parts
 
 | Item | Quantity | Notes |
 |---|---:|---|
 | Sealed 2-pin power connector and mating plug | 1 pair | Include contacts and seals |
 | Sealed fuel-tap connector and mating plug | 1 pair | Matches the harness arrangement |
+| OEM-compatible sender adapter plug and socket | 1 mating connector of each required type | With terminals, seals and adapter wiring; matches the existing sender connection exactly, passing all original pins straight through and adding the signal branch only in the new adapter |
 | 4- or 5-pin GPS connector | 1 pair, if external | Power, ground, UART and optional PPS |
 | SuperMini mounting headers/sockets | 1 set, if socketed | Match the actual board footprint and header arrangement |
 | USB-C data cable | 1 | For SuperMini programming and bench testing |
@@ -131,6 +136,7 @@ For the SuperMini, backup power must also reach the controller after ignition-of
 - Vehicle transient requirements and coordinated fuse, TVS and reverse-protection ratings.
 - Exact 3.3 V regulator and all regulator/filter supporting components.
 - Motorcycle fuel-signal voltage and waveform.
+- Exact sender signal pin and ground reference, T-harness mating connectors, input clamp ratings and powered-off/rail-current protection.
 - Connector family, enclosure dimensions and environmental requirements.
 - If using backup power: battery capacity, temperature limits and charge current.
 

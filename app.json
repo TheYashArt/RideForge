@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "Rideforge",
+    "slug": "rideforge",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "scheme": "rideforge",
+    "android": {
+      "package": "com.yash.rideforge",
+      "permissions": [
+        "BLUETOOTH_SCAN",
+        "BLUETOOTH_CONNECT"
+      ]
+    },
+    "plugins": [
+      "expo-dev-client",
+      "expo-sqlite",
+      [
+        "react-native-ble-plx",
+        {
+          "isBackgroundEnabled": false
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "isAndroidBackgroundLocationEnabled": true,
+          "isAndroidForegroundServiceEnabled": true,
+          "locationAlwaysAndWhenInUsePermission": "Record your rides even with the screen locked."
+        }
+      ],
+      "expo-notifications"
+    ]
+  }
+}

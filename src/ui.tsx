@@ -1,0 +1,8 @@
+import React,{useEffect,useRef,useState} from 'react';
+import {Text as NativeText,TextInput as NativeInput,Pressable as NativePressable,Animated,AccessibilityInfo,Platform,TextProps,TextInputProps,PressableProps} from 'react-native';
+import {isLoaded} from 'expo-font';
+export function font(){return isLoaded('TimesNewRoman')?'TimesNewRoman':Platform.OS==='ios'?'Times New Roman':'serif';}
+export function Text(props:TextProps){return <NativeText {...props} style={[{fontFamily:font()},props.style]}/>;}
+export function TextInput(props:TextInputProps){return <NativeInput {...props} style={[{fontFamily:font()},props.style]}/>;}
+export function Pressable(props:PressableProps){const a=useRef(new Animated.Value(1)).current;const [reduce,setReduce]=useState(false);useEffect(()=>{AccessibilityInfo.isReduceMotionEnabled().then(setReduce);const sub=AccessibilityInfo.addEventListener('reduceMotionChanged',setReduce);return()=>sub.remove();},[]);const animate=(v:number)=>{if(!reduce)Animated.timing(a,{toValue:v,duration:110,useNativeDriver:true}).start();};return <Animated.View style={{opacity:a,flexShrink:1}}><NativePressable {...props} onPressIn={e=>{animate(.72);props.onPressIn?.(e);}} onPressOut={e=>{animate(1);props.onPressOut?.(e);}}/></Animated.View>;}
+export function Section({children,id}:{children:React.ReactNode;id:string}){const a=useRef(new Animated.Value(1)).current;useEffect(()=>{let mounted=true;AccessibilityInfo.isReduceMotionEnabled().then(reduce=>{if(!mounted||reduce)return;a.setValue(.75);Animated.timing(a,{toValue:1,duration:160,useNativeDriver:true}).start();});return()=>{mounted=false;};},[id]);return <Animated.View style={{flex:1,opacity:a}}>{children}</Animated.View>;}
